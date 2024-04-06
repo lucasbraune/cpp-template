@@ -7,6 +7,6 @@ namespace cpp_template {
 
 void reverse(std::string& s);
 
-} // namespace cpp_template
+}  // namespace cpp_template
 
 #endif
