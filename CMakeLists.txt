@@ -5,5 +5,8 @@ project(CppTemplate VERSION 1.0)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(Main src/main.cpp)
+add_library(lib src/lib.cpp)
+add_executable(main src/main.cpp)
+target_link_libraries(main lib)
+
 
