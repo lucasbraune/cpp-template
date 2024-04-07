@@ -7,8 +7,8 @@
 
 namespace cpp_template {
 
-void reverse(std::string& s);
-std::optional<char> first_char(std::string_view str);
+void reverse(std::string& s) noexcept;
+std::optional<char> first_char(std::string_view str) noexcept;
 
 }  // namespace cpp_template
 

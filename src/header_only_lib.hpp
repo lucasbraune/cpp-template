@@ -15,8 +15,10 @@ inline void fun_with_ranges() {
   auto square = [](int i) { return i * i; };
 
   // the "pipe" syntax of composing the views:
-  for (int i : ints | std::views::filter(even) | std::views::transform(square))
+  for (int i :
+       ints | std::views::filter(even) | std::views::transform(square)) {
     std::cout << i << ' ';
+  }
 
   std::cout << '\n';
 }
