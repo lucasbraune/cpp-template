@@ -2,21 +2,18 @@
 
 ## Building and running
 
-Generate build system (once):
-
 Initialize vcpkg submodule and generate build system (once):
 
 ```shell
-# Initialize vcpkg submodule
 git submodule update --init
-# Generate build system
+mkdir build
 cmake -B build
 ```
 
-Build the project:
+Build and test:
 
-```shell
-make -C build
+```
+make -C build all test
 ```
 
 This regenerates the build system and downloads dependencies if necessary.
@@ -25,7 +22,7 @@ Run executables:
 
 ```shell
 ./build/main
-./build/main2
+./build/main2 --value=40
 ```
 
 ## LLVM tools
@@ -47,15 +44,4 @@ clang-format -i src/*
 
 The build process runs `clang-tidy` with the appropriate options. Unfortunately,
 running `clang-tidy src/* -p build` yields errors.
-
-## TODO
-
-- [x] Add library
-- [x] Set up language server (clangd). Should work for headers.
-- [x] Integrate clangtidy (linter) with cmake ~~and vim~~.
-- [x] Set up code formatter (clangformat) to run on build
-- [x] Set up vcpkg as a git submodule, in manifest mode. Add dependency on boost
-  library.
-- [ ] Add tests using GoogleTest
-
 
