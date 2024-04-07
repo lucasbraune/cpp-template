@@ -8,4 +8,12 @@ void reverse(std::string& s) {
   }
 }
 
+std::optional<char> first_char(std::string_view str) {
+  if (str.empty()) {
+    return {};
+  } else {
+    return {str[0]};
+  }
+}
+
 }  // namespace cpp_template
