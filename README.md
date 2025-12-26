@@ -12,7 +12,7 @@ cmake -B build
 
 Build and test:
 
-```
+```shell
 make -C build all test
 ```
 
@@ -44,4 +44,3 @@ clang-format -i src/*
 
 The build process runs `clang-tidy` with the appropriate options. Unfortunately,
 running `clang-tidy src/* -p build` yields errors.
-
